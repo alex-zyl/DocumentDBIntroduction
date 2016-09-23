@@ -1,0 +1,77 @@
+{
+  "indexingMode": "consistent",
+  "automatic": true,
+  "includedPaths": [
+    {
+      "path": "/user/name/?",
+      "indexes": [
+        {
+          "kind": "Range",
+          "dataType": "String",
+          "precision": -1
+        },
+        {
+          "kind": "Range",
+          "dataType": "Number",
+          "precision": -1
+        }
+      ]
+    },
+    {
+      "path": "/user/screen_name/?",
+      "indexes": [
+        {
+          "kind": "Range",
+          "dataType": "String",
+          "precision": -1
+        },
+        {
+          "kind": "Range",
+          "dataType": "Number",
+          "precision": -1
+        }
+      ]
+    },
+    {
+      "path": "/*",
+      "indexes": [
+        {
+          "kind": "Range",
+          "dataType": "Number",
+          "precision": -1
+        },
+        {
+          "kind": "Hash",
+          "dataType": "String",
+          "precision": 3
+        }
+      ]
+    },
+    {
+      "path": "/\"_ts\"/?",
+      "indexes": [
+        {
+          "kind": "Range",
+          "dataType": "Number",
+          "precision": -1
+        },
+        {
+          "kind": "Hash",
+          "dataType": "String",
+          "precision": 3
+        }
+      ]
+    }
+  ],
+  "excludedPaths": [
+    {
+      "path": "/entities/*"
+    },
+    {
+      "path": "/user/favourites_count/?"
+    },
+    {
+      "path": "/in_reply_to_status_id/?"
+    }
+  ]
+}
